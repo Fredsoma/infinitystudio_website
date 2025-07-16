@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-color: #4f46e5;
+  --accent-color: #6366f1;
+  --radius: 0.75rem;
+  --spacing: 1rem;
+  --transition: 0.3s ease;
+  --font-sans: "Inter", sans-serif;
+  --body-bg: var(--bg-light, #f9fafb);
+  --heading-color: var(--text-color, #1f2937);
+  --link-color: var(--primary-color);
+  --link-active: var(--accent-color);
+  --card-bg: var(--bg-white, #ffffff);
+  --small-text-color: rgba(31, 41, 55, 0.7);
+  --icon-bg: #151e4f;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.tp-container {
+  font-family: var(--font-sans);
+  color: var(--heading-color);
+  background: var(--body-bg);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ==============================
+   Hero
+   ============================== */
+.tp-hero {
+  background: var(--primary-color);
+  color: var(--card-bg);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.tp-hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.tp-hero-subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+.tp-primary-btn {
+  background: var(--card-bg);
+  color: var(--primary-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition);
+}
+.tp-primary-btn:hover {
+  background: var(--accent-color);
+  color: var(--card-bg);
+}
+
+/* ==============================
+   Features
+   ============================== */
+.tp-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  padding: 2rem 1rem;
+  justify-content: center;
+  background: var(--body-bg);
+}
+.tp-feature-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  max-width: 300px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.tp-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.feature-icon {
+  font-size: 2rem;
+  color: rgb(238, 238, 0);
+  margin-bottom: 1rem;
+}
+.tp-card-title {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--heading-color);
+}
+.tp-card-desc {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--small-text-color);
+}
+
+/* ==============================
+   Courses
+   ============================== */
+.our_courses {
+  padding: 4rem 1rem;
+  background: var(--body-bg);
+}
+
+.courses_content {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--small-text-color);
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.courses_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.course_item {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.course_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.course_img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.course_img img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transform: scale(1.3);
+}
+
+.course_details {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.course_details h4 {
+  font-size: 1.25rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.course_details .description {
+  font-size: 0.9rem;
+  color: var(--small-text-color);
+  margin-bottom: 1rem;
+}
+
+.course_details .tp-secondary-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.tp-secondary-btn {
+  background: var(--primary-color);
+  color: var(--card-bg);
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.tp-secondary-btn:hover {
+  background: var(--btn-secondary-bg);
+  border: 1px solid #379cf6;
+  color: var(--card-bg);
+}
+
+/* ==============================
+   Testimonials
+   ============================== */
+.tp-testimonials {
+  padding: 3rem 1rem;
+  background: var(--body-bg);
+}
+.tp-testimonial-grid {
+  display: grid;
+  gap: var(--spacing);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.tp-testimonial-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.tp-quote {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--small-text-color);
+}
+.tp-quote-author {
+  text-align: right;
+  font-weight: bold;
+  color: var(--heading-color);
+}
+
+/* ==============================
+   FAQ
+   ============================== */
+.tp-faq {
+  background: var(--body-bg);
+  padding: 3rem 1rem;
+}
+.tp-accordion-item {
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.tp-accordion-trigger {
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  color: var(--heading-color);
+}
+.tp-accordion-trigger::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+/* flip arrow when open */
+.tp-accordion-item[open] .tp-accordion-trigger::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.tp-accordion-content {
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--small-text-color);
+}
+
+/* ==============================
+   Course Detail View
+   ============================== */
+.course-detail {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.detail-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.detail-img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.detail-info h2,
+.detail-info .detail-title {
+  margin: 0;
+  color: var(--heading-color);
+}
+.detail-info p {
+  margin: 0.25rem 0;
+  color: var(--small-text-color);
+}
+.detail-body h3 {
+  margin-top: 1.5rem;
+  color: var(--heading-color);
+}
+.detail-body p {
+  line-height: 1.6;
+}
+.detail-modules {
+  margin: 0.5rem 0 0 1.25rem;
+  color: var(--small-text-color);
+}
+.detail-modules li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   Responsive Breakpoints
+   ============================== */
+@media (min-width: 768px) {
+  .tp-features {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .tp-faq {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing);
+  }
+}
+
+@media (max-width: 992px) {
+  .course_item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .course_item {
+    width: 90%;
+  }
+}

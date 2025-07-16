@@ -1,0 +1,226 @@
+:root {
+  --primary: #4f46e5;
+  --accent: #6366f1;
+  --body: #f9f9fb;
+  --dark: #0c123d;
+  --white: #fff;
+  --text: #333;
+  --radius: 0.75rem;
+  --spacing: 1rem;
+  --font: "Inter", sans-serif;
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font);
+  background: var(--body);
+  color: var(--text);
+}
+
+/* ==============================
+   Contact Us Wrapper
+   ============================== */
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing);
+  gap: 2rem;
+}
+
+/* ==============================
+   Header
+   ============================== */
+.contact-us__header {
+  text-align: center;
+  max-width: 600px;
+}
+.contact-us__title {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.contact-us__highlight {
+  color: #379cf6;
+}
+.contact-us__subtitle {
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+/* ==============================
+   Contact Info Row (legacy “first-line”)
+   ============================== */
+.contact-us__details {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.contact-us__detail {
+  display: flex;
+  align-items: center;
+  border: 2px dashed #379cf6;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  transition: background var(--transition);
+}
+
+.contact-us__icon {
+  border: 2px dashed #379cf6;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #379cf6;
+  font-size: 1.5rem;
+}
+.contact-us__label {
+  margin-left: 0.75rem;
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+/* ==============================
+   Body (Media + Form)
+   ============================== */
+.contact-us__body {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+.contact-us__media {
+  flex: 1;
+  position: relative;
+}
+.contact-us__image--main {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.contact-us__image--logo {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 80px;
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us__form {
+  flex: 1;
+  background: linear-gradient(
+    45deg,
+    rgba(15, 18, 61, 1) 33%,
+    rgba(15, 18, 61, 1) 52%,
+    rgba(11, 41, 69, 1) 84%
+  );
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.contact-us__form:hover {
+  box-shadow: 0 0 25px #379cf6;
+}
+.contact-us__field-group {
+  display: flex;
+  flex-direction: column;
+}
+.contact-us__field-group label {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #379cf6;
+}
+.contact-us__field-group input,
+.contact-us__field-group textarea {
+  padding: 0.75rem;
+  background-color: #090238;
+  color: #379cf6;
+  border-radius: var(--radius);
+}
+.contact-us__field-group input:focus,
+.contact-us__field-group textarea:focus {
+  border: 1px solid #379cf6;
+  outline: #379cf6;
+}
+.contact-us__btn {
+  width: 27%;
+  margin: 1rem auto 0;
+  background: #090238;
+  color: var(--white);
+  border: 1px solid #379cf6;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.contact-us__btn:hover {
+  background: #379cf6;
+}
+
+/* ==============================
+   Social Icons
+   ============================== */
+.contact-us__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--spacing);
+}
+.contact-us__social svg {
+  font-size: 1.5rem;
+  color: #379cf6;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.contact-us__social svg:hover {
+  color: var(--accent);
+}
+
+#mediaicon:hover {
+  color: #fff;
+}
+
+/* ==============================
+   Map
+   ============================== */
+.contact-us__map {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 2;
+}
+.contact-us__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==============================
+   Responsive Adjustments
+   ============================== */
+@media (max-width: 900px) {
+  .contact-us__body {
+    flex-direction: column;
+  }
+  .contact-us__details {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,241 @@
+
+#About {
+  overflow-x: hidden;
+}
+
+.about_body {
+  padding: 2rem 1rem;
+}
+
+.about_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about_content,
+.about_img {
+  width: 100%;
+}
+
+/* Typography & spacing */
+.subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.about_content h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.about_content-desc {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.choose_us-item {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.choose_us-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.choose_us-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.choose_us-title {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Buttons & links */
+.sign_btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.primary_btn.more_btn {
+  background-color: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-primary-bg);
+  color: #fff;
+  width: 155px;
+}
+
+.primary_btn.more_btn:hover {
+  background-color: var(--btn-primary-bg);
+}
+
+.light-theme .choose_us-title {
+  color: #0c123d;
+}
+
+/* Image */
+.about_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* Extra content blocks */
+.header0 {
+  width: 100%;
+  background-color: #0c123d;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.headertext,
+.htext,
+.subnotority1 h2,
+.subnotority3 p,
+.subnotority3 h4,
+.aboutinfo p,
+.check {
+  color: #fff;
+}
+
+.htext {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.notoritymain {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--btn-secondary-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.subnotority1 h2 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: var(--primary-color);
+}
+
+.subnotority2,
+.subnotority3,
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.check {
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  background-color: var(--btn-secondary-bg);
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Tablet & Small Desktop (≥768px)                                         */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (min-width: 768px) {
+  .about_content h2 {
+    font-size: 2rem;
+  }
+  .about_content-desc,
+  .description {
+    font-size: 1rem;
+  }
+  .primary_btn.more_btn {
+    width: auto;
+    padding: 0.7rem 1.5rem;
+  }
+  .notoritymain {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .aboutinfo p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .colorbar {
+    height: 200px;
+  }
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Desktop & Large Desktop (≥992px)                                        */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (min-width: 992px) {
+  .about_wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 2rem 0;
+  }
+
+  .about_content,
+  .about_img {
+    width: 50%;
+  }
+
+  .about_content {
+    text-align: left;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  .about_content h2 {
+    font-size: 2.5rem;
+  }
+  .about_content-desc {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  .choose_us-item {
+    margin-top: 1.5rem;
+  }
+  .primary_btn.more_btn {
+    margin-right: 0;
+  }
+  .notoritymain {
+    padding: 2rem;
+  }
+  .header0 {
+    margin: 3rem 0;
+  }
+}

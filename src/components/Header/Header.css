@@ -1,0 +1,185 @@
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+.header-bg {
+  background: #0c123d;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Default (Mobile‑First)                                                  */
+/*──────────────────────────────────────────────────────────────────────────*/
+/* Hide desktop nav by default; show hamburger */
+.navigation {
+  display: none;
+}
+.mobile_menu {
+  display: block;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Overlay (Mobile)                                                       */
+/*──────────────────────────────────────────────────────────────────────────*/
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+}
+.nav-overlay.visible {
+  display: block;
+}
+/* Icon spacing */
+.menu_icon {
+  display: none;
+  margin-right: 0.5rem; 
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.menu_text {
+  vertical-align: middle;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Slide‑In Nav on Mobile                                                 */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (max-width: 991px) {
+  .navigation {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; 
+    height: 100vh;
+    width: 100vw; 
+    max-width: none; 
+    background: #054caa;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 901;
+  }
+  .navigation.menu_active {
+    transform: translateX(0);
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+    list-style: none;
+  }
+  .menu_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+  }
+  .menu_link:hover {
+    background-color: var(--primary-color, #27ae60);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .menu_icon {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  .theme-btn {
+    margin-top: 1rem;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .theme-btn:hover {
+    background: #fff;
+    color: #054caa;
+  }
+}
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Desktop Navigation                                                    */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (min-width: 992px) {
+  .navigation {
+    display: flex;
+    position: static;
+    height: auto;
+    width: auto;
+    transform: none;
+    background: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+  }
+  .menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .menu_link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+  }
+  .menu_link:hover {
+    background-color: var(--primary-color, #27ae60);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+  }
+
+  /* Theme toggle button */
+  .theme-btn {
+    background: none;
+    border: 1px solid #379cf6;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  .theme-btn:hover {
+    background: #379cf6;
+    color: #fff;
+  }
+
+  /* Hide hamburger */
+  .mobile_menu {
+    display: none;
+  }
+}

@@ -1,0 +1,240 @@
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Hero Section — Mobile‑First Base                                        */
+/*──────────────────────────────────────────────────────────────────────────*/
+.hero_section {
+  overflow-x: hidden;
+}
+
+.hero_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.hero_content,
+.hero_img {
+  width: 100%;
+}
+
+/* Content styles */
+.hero_content {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.hero_content h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 0.5rem 0;
+}
+
+.hero_content p {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.hero_btns {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Buttons */
+.primary_btn,
+.secondary_btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.primary_btn {
+  background-color: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-primary-bg);
+}
+
+.secondary_btn {
+  background-color: var(--btn-primary-bg);
+}
+
+.light-theme .getbtn {
+  color: #000;
+}
+
+.getbtn:hover {
+  background-color: var(--btn-primary-bg);
+  border: 1px solid var(--btn-primary-bg);
+  color: #fff;
+}
+
+.discbtn:hover {
+  background-color: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-primary-bg);
+  color: #fff;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Slider (.hero_img) Styles                                              */
+/*──────────────────────────────────────────────────────────────────────────*/
+.hero_img {
+  position: relative;
+  overflow: visible;
+}
+
+.hero_img .slick-prev,
+.hero_img .slick-next {
+  display: none !important;
+}
+
+.hero_img .slick-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex !important;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero_img .slick-dots li {
+  width: auto;
+}
+
+.hero_img .slick-dots li button:before {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.hero_img .slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Tablet & Small Desktop (≥ 768px)                                        */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (min-width: 768px) {
+  .hero_content h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .hero_content p {
+    font-size: 1rem;
+  }
+  .primary_btn,
+  .secondary_btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Desktop & Large Desktop (≥ 992px)                                       */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (min-width: 992px) {
+  .hero_wrapper {
+    flex-direction: row; /* side by side */
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 1rem;
+    gap: 4rem;
+  }
+
+  .hero_content,
+  .hero_img {
+    width: 48%;
+  }
+
+  .hero_content {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .hero_content h2 {
+    font-size: 3rem;
+  }
+
+  .hero_content p {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .hero_btns {
+    margin-top: 2rem;
+    justify-content: flex-start;
+  }
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Mid‑Range Tablets (768px–991px): two‑column layout                    */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero_wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
+  .hero_content,
+  .hero_img {
+    width: 48%;
+  }
+  .hero_content {
+    text-align: left;
+    padding-top: 0;
+  }
+  .hero_content h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .hero_content p {
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+  }
+  .hero_btns {
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+  }
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Mobile Fixes (<768px): center the text                     */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (max-width: 767px) {
+  .hero_content p {
+    max-width: 300px;
+    margin: 1rem auto 0;
+    text-align: center;
+  }
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Extra‑Small Mobile (≤ 480px)                                             */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (max-width: 480px) {
+  .hero_btns {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .primary_btn,
+  .secondary_btn {
+    width: 100%;
+    padding: 0.6rem 0;
+  }
+}

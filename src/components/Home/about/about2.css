@@ -1,0 +1,343 @@
+
+:root {
+  --primary-color: #4f46e5;
+  --accent-color: #6366f1;
+  --radius: 0.75rem;
+  --spacing: 1rem;
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-name, "Inter"), sans-serif;
+  color: var(--heading-color);
+  background-color: var(--body-bg);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--link-active);
+}
+
+section {
+  padding: 4rem var(--spacing);
+}
+
+/* ==============================
+   About Container & Cards
+   ============================== */
+.inf-about {
+  background: var(--body-bg);
+}
+
+/* === Hero Header Override === */
+.inf-about__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* dark overlay */ url("../../../images/about-us.jpg") center/cover
+      no-repeat;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem; /* spacing below hero */
+}
+
+.inf-about__header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.inf-about__header > * {
+  position: relative; 
+  z-index: 1;
+}
+
+.inf-about__title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.inf-highlight {
+  color: var(--primary-color);
+}
+
+.inf-breadcrumb {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.5rem;
+}
+
+.inf-breadcrumb__link {
+  color: #fff;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.inf-breadcrumb__link:hover {
+  color: var(--accent-color);
+}
+
+.inf-breadcrumb__sep {
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* shrink hero on phones */
+@media (max-width: 767px) {
+  .inf-about__header {
+    min-height: 40vh;
+  }
+  .inf-about__title {
+    font-size: 2.25rem;
+  }
+}
+
+/* shrink hero on tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .inf-about__header {
+    min-height: 50vh;
+  }
+  .inf-about__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==============================
+   Mission & Vision
+   ============================== */
+.inf-mission {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inf-mission__bar {
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto var(--spacing) auto;
+  border-radius: var(--radius);
+}
+
+.inf-mission__text {
+  font-size: 1.125rem;
+  color: var(--heading-color);
+}
+
+/* ==============================
+   Story Timeline (Styled as Cards)
+   ============================== */
+.inf-story {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.inf-story__heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--heading-color);
+}
+
+.inf-story__timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing);
+}
+
+.inf-story__point {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+
+.inf-story__point:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--primary-color);
+}
+
+.inf-story__year {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.inf-story__text {
+  font-size: 0.95rem;
+  color: var(--small-text-color);
+}
+
+/* Story responsive */
+@media (max-width: 767px) {
+  .inf-story__timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .inf-story__point {
+    width: 48%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .inf-story__point {
+    width: 31%;
+  }
+}
+@media (min-width: 1200px) {
+  .inf-story__point {
+    width: 22%;
+    padding: 2rem;
+  }
+}
+
+/* ==============================
+   Values
+   ============================== */
+.inf-values {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inf-values__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.inf-values__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.inf-values__desc {
+  font-size: 1rem;
+  color: var(--small-text-color);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.inf-values__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing);
+}
+
+.inf-value-item {
+  background: var(--card-bg);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.inf-value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--primary-color);
+}
+
+.inf-value-item__icon {
+  background: var(--icon-bg);
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius);
+}
+
+.inf-value-item__icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.inf-value-item__title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.inf-value-item__text {
+  font-size: 0.9rem;
+  color: var(--small-text-color);
+}
+
+/* ==============================
+   Call to Action
+   ============================== */
+.inf-cta {
+  background: linear-gradient(
+    90deg,
+    rgba(27, 9, 115, 1) 20%,
+    rgba(23, 9, 96, 1) 38%,
+    rgba(14, 9, 56, 1) 100%
+  );
+  color: var(--body-bg);
+  text-align: center;
+  padding: 3rem var(--spacing);
+}
+
+.inf-cta__heading {
+  font-size: 2rem;
+  margin-bottom: var(--spacing);
+  color: #fff;
+}
+
+.inf-cta__text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.inf-cta__button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.inf-cta__button:hover {
+  background: #090238;
+  border: 1px solid var(--primary-color);
+  color: #fff;
+}

@@ -1,0 +1,173 @@
+.contact {
+  padding-top: 100px;
+}
+.Contact-heading {
+  position: relative;
+  text-align: center;
+}
+
+.ficons {
+  position: relative;
+  left: 80px;
+}
+
+.light-theme .phmail p {
+  color: #000;
+}
+
+.light-theme .phmail span {
+  color: #000;
+}
+
+.image1 {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  width: 60%;
+  height: 503px;
+}
+
+.image1 img {
+  border-radius: 10px;
+  height: 500px;
+}
+
+.image2 {
+  position: relative;
+  left: 140px;
+  bottom: 320px;
+  rotate: 270deg;
+  width: 70%;
+  height: 100px;
+}
+
+.contact-main {
+  position: relative;
+  top: 70px;
+}
+
+.first-line {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.content {
+  display: flex;
+  border: 2px dashed var(--primary-color);
+  padding: 15px;
+  border-radius: 5px;
+  padding-right: 80px;
+  align-items: center;
+}
+.content p {
+  color: aliceblue;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.light-theme .content p {
+  color: #000;
+}
+.contact_us-icon {
+  border: 1px dashed var(--primary-color);
+  border-radius: 50%;
+  padding: 10px 13px;
+}
+.contact_us-icon i {
+  color: var(--primary-color);
+  font-size: 25px;
+}
+.contact-form {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.contact-form iframe {
+  height: 100%;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form form input,
+.contact-form form textarea {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  height: 60px;
+  margin: 10px;
+  font-size: 20px;
+  padding-left: 10px;
+  outline: none;
+  color: #000;
+}
+.contact-form form textarea {
+  height: 200px;
+}
+.contact-form form button {
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 25px;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.form-Email,
+.form-Name {
+  width: 45%;
+}
+
+@media only screen and (max-width: 768px) {
+  .first-line {
+    flex-direction: column;
+  }
+  .content {
+    margin-top: 10px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form iframe {
+    height: 400px;
+  }
+  .image1 {
+    position: relative;
+    right: 5px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    width: 100%;
+    height: 404px;
+  }
+
+  .image1 img {
+    border-radius: 10px;
+    width: 100%;
+    height: 401px;
+  }
+  .image2 {
+    position: relative;
+    left: 40px;
+    bottom: 10px;
+    rotate: 0deg;
+    width: 70%;
+    height: 100px;
+  }
+  .ctcform {
+    position: relative;
+    top: 50px;
+  }
+  .name {
+    width: 95%;
+  }
+  .gmail {
+    width: 95%;
+  }
+  .ficons {
+    position: relative;
+    left: -25px;
+  }
+}

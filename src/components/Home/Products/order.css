@@ -1,0 +1,103 @@
+:root {
+  --body-bg: #f9f9fb;
+  --color-bg: var(--body-bg);
+  --color-card: #ffffff;
+  --color-primary: #4f46e5;
+  --color-accent: #6366f1;
+  --color-text: #333333;
+  --radius: 1rem;
+  --spacing: 1.25rem;
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-name, "Inter"), sans-serif;
+  color: var(--color-text);
+  background-color: var(--body-bg);
+}
+
+.order-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--spacing);
+  background: var(--body-bg);
+  min-height: 100vh;
+}
+
+/* Card style for the form */
+.order-page .order-form {
+  background: var(--body-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing);
+  width: min(100%, 480px);
+  margin: var(--spacing) 0;
+  display: grid;
+  gap: var(--spacing);
+  transition: transform 0.2s ease;
+}
+.order-page .order-form:hover {
+  transform: translateY(-0.25rem);
+}
+
+/* Section heading */
+.order-page .order-form > h2 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: #379cf6;
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+/* Form body layout */
+.order-page .order-form__body {
+  display: grid;
+  gap: var(--spacing);
+}
+
+/* Fluid inputs */
+.order-page .order-form__body label {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: #379cf6;
+}
+.order-page .order-form__body input {
+  margin-top: 0.5em;
+  padding: 0.75em;
+  font-size: 1rem;
+  border: 1px solid #379cf6;
+  border-radius: var(--radius);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.order-page .order-form__body input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0.5rem rgba(79, 70, 229, 0.2);
+}
+
+/* Button */
+.order-page .order-form__submit {
+  display: block;
+  width: 100%;
+  padding: 0.875em;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  text-align: center;
+  color: #fff;
+  background: #090238;
+  border: 1px solid #379cf6;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.order-page .order-form__submit:hover {
+  background: #379cf6;
+  transform: translateY(-0.15rem);
+}
+.order-page .order-form__submit:active {
+  transform: translateY(0);
+}
