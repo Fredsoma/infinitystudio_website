@@ -11,15 +11,30 @@ import {
 const chossData = [
   {
     icon: "ri-wifi-line",
-    title: "Streamlined Workflow",
+    title: "We Analyse",
     desc: "Our transparent, step‑by‑step process ensures every milestone is clear, on‑time, and on‑budget.",
   },
   {
     icon: "ri-team-line",
-    title: "Dedicated Team",
+    title: "We Design",
     desc: "A hand‑picked crew of experts in design, development, and marketing committed to your success.",
   },
   {
+    icon: "ri-wifi-line",
+    title: "We Implement",
+    desc: "Our transparent, step‑by‑step process ensures every milestone is clear, on‑time, and on‑budget.",
+  },
+  {
+    icon: "ri-team-line",
+    title: "We Test",
+    desc: "A hand‑picked crew of experts in design, development, and marketing committed to your success.",
+  },
+  {
+    icon: "ri-time-line",
+    title: "We Deploy and maintain",
+    desc: "Around‑the‑clock assistance means you’ll never be left waiting for answers or updates.",
+  },
+   {
     icon: "ri-time-line",
     title: "24/7 Support",
     desc: "Around‑the‑clock assistance means you’ll never be left waiting for answers or updates.",
@@ -41,16 +56,9 @@ const About = () => {
             variants={fadeIn("up", "tween", 0.2, 1)}
             className="about_content"
           >
-            <h6 className="subtitle"> Why choose us</h6>
-            <h2>Specialist in advicing client on</h2>
-            <h2 className="highlight">Financial challenges</h2>
-            <p className="description about_content-desc">
-              At Infinity Studios, we understand that every euro counts. Our
-              team combines deep financial expertise with creative marketing
-              know‑how to craft campaigns that boost your ROI and strengthen
-              your brand’s bottom line.
-            </p>
-
+            <h6 className="subtitle"> Why choose us !!!</h6>
+            <h2>Specialist in advicing client</h2>
+            <h2 className="highlight">with our unique technology</h2>
             <div>
               {chossData.map((item, index) => (
                 <div className="choose_us-item" key={index}>

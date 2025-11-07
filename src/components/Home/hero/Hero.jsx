@@ -92,6 +92,12 @@ export default function Hero({ theme }) {
           </motion.div>
         </div>
       </motion.div>
+      <div aria-label="Mission and Vision" className="inf-mission">
+            <div className="inf-mission__bar" />
+            <p className="inf-mission__text">
+              Infinity Studios provides to achieve excellence in <span className="highlight">Digital transformation</span>,<span className="highlight">IT</span> and <span className="highlight">all Printing Services</span>.
+            </p>
+          </div>
     </section>
   );
 }

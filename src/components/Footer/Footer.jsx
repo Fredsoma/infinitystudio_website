@@ -19,6 +19,19 @@ const pagesLinks = [
   { path: "/quote", display: "Quote" },
 ];
 
+const services = [
+  { display: "Printing" },
+  { display: "Graphic Design" },
+  { display: "Digital Marketing" },
+  { display: "Web Design" },
+  { display: "App Development" },
+];
+
+const support = [
+  { display: "Infinity" },
+  { display: "undefine" },
+];
+
 export default function Footer() {
   const [showTop, setShowTop] = useState(false);
 
@@ -64,9 +77,31 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="footer_quick-links">
+          <h3 className="quick_links-title">Services</h3>
+          <ul className="quick_links">
+            {services.map((link, i) => (
+              <li key={i} className="quick_link-item">
+                <Link to={link.path}>{link.display}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* Quick Links */}
+        <div className="footer_quick-links">
           <h3 className="quick_links-title">Quick Links</h3>
           <ul className="quick_links">
             {pagesLinks.map((link, i) => (
+              <li key={i} className="quick_link-item">
+                <Link to={link.path}>{link.display}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* Quick Links */}
+        <div className="footer_quick-links">
+          <h3 className="quick_links-title">support</h3>
+          <ul className="quick_links">
+            {support.map((link, i) => (
               <li key={i} className="quick_link-item">
                 <Link to={link.path}>{link.display}</Link>
               </li>

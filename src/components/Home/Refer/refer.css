@@ -1,0 +1,10 @@
+/* Icon */
+.service_ico {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

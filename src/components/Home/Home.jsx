@@ -8,6 +8,10 @@ import Counter from "./counter/Counter";
 import Hero from "./hero/Hero";
 import Services from "./services/Services";
 import Contactus from "./Contactus/Contactus";
+import Serv from "./serv/Serv";
+import Innov from "./innov/Innov";
+import Refer from "./Refer/Refer";
+import Solution from "./solution/Solution";
 
 const Home = () => {
   const [theme] = useState("");
@@ -20,9 +24,13 @@ const Home = () => {
   return (
     <>
       <Hero theme={theme} />
-      <Services />
-      <About />
+      <Serv />
       <Counter />
+      <About />
+      <Innov />
+      <Refer />
+      <Solution />
+       {/*<Services /> */}
       <Team />
       <Testimonial />
       <Contactus />
