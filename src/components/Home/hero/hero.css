@@ -1,5 +1,5 @@
 /*──────────────────────────────────────────────────────────────────────────*/
-/*  Hero Section — Mobile‑First Base                                        */
+/*  Hero Section — Mobile-First Base                                        */
 /*──────────────────────────────────────────────────────────────────────────*/
 .hero_section {
   overflow-x: hidden;
@@ -181,7 +181,7 @@
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*  Mid‑Range Tablets (768px–991px): two‑column layout                    */
+/*  Mid-Range Tablets (768px–991px): two-column layout                    */
 /*──────────────────────────────────────────────────────────────────────────*/
 @media (min-width: 768px) and (max-width: 991px) {
   .hero_wrapper {
@@ -225,7 +225,7 @@
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*  Extra‑Small Mobile (≤ 480px)                                             */
+/*  Extra-Small Mobile (≤ 480px)                                             */
 /*──────────────────────────────────────────────────────────────────────────*/
 @media (max-width: 480px) {
   .hero_btns {
@@ -236,5 +236,80 @@
   .secondary_btn {
     width: 100%;
     padding: 0.6rem 0;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────── */
+/*  ADDITIONAL RULES (merged in) — prevents layout jumps, improves images   */
+/* ───────────────────────────────────────────────────────────────────────── */
+
+/* Ensure the text area won't jump too much when changing slides */
+.hero_text {
+  /* min-height reduces layout shift when text changes */
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Make h2 styles consistent with animation */
+.hero_text h2 {
+  margin: 0.35rem 0;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+/* Slight adjustments for description spacing */
+.hero_text .description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Improve image layout & responsiveness */
+.hero_img .hero_slide_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.hero_img img {
+  width: 100%;
+  max-width: 520px; /* limit on large screens */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* When slider dots appear, keep them above the image nicely */
+.hero_img .slick-dots {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Reduce jump when animatePresence swaps text on mobile */
+@media (max-width: 767px) {
+  .hero_text {
+    min-height: 140px;
+    text-align: center;
+  }
+  .hero_content {
+    padding-top: 0.6rem;
+  }
+}
+
+/* Desktop tweaks */
+@media (min-width: 992px) {
+  .hero_text {
+    min-height: 220px;
+  }
+  .hero_img img {
+    max-width: 640px;
   }
 }

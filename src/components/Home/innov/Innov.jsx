@@ -22,7 +22,7 @@ const Innov = () => {
         <div className="about_wrapper">
             <motion.div
             variants={fadeIn("up", "tween", 0.2, 1)}
-            className="about_img"
+            className="about_im"
           >
             <img src={aboutImg} alt="" />
           </motion.div>
@@ -34,10 +34,7 @@ const Innov = () => {
               Innovation always at the heart of your business.
             </h2>
              <p className="description about_content-desc">
-              At Infinity Studios, we understand that every euro counts. Our
-              team combines deep financial expertise with creative marketing
-              know‑how to craft campaigns that boost your ROI and strengthen
-              your brand’s bottom line.
+              At Infinity Studios we put innovation into action: combining human-centred design, modern tech and data-driven strategy to create products and campaigns that increase engagement, cut waste, and grow your bottom line.
             </p>
             <Link to="/About2" className="sign_btn primary_btn more_btn">
               Discover More

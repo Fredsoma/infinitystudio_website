@@ -7,11 +7,14 @@
   padding: 2rem 1rem;
 }
 
+
+
 .about_wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .about_content,
@@ -111,6 +114,18 @@
   object-fit: cover;
 }
 
+.about_im img{
+ position: relative;
+ bottom: 75px;
+}
+
+.about_i img{
+  position: relative;
+  bottom: 70px;
+  width: 500px;
+}
+
+
 /* Extra content blocks */
 .header0 {
   width: 100%;
@@ -194,6 +209,8 @@
   .colorbar {
     height: 200px;
   }
+
+
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
@@ -238,4 +255,5 @@
   .header0 {
     margin: 3rem 0;
   }
+
 }

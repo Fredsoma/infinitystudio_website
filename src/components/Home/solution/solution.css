@@ -1,0 +1,40 @@
+.sec{
+    height: 500px;
+}
+
+.soltext{
+    position: relative;
+    top: 10px;
+}
+
+.acont{
+    position: relative;
+    top: 10px;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  Tablet & Small Desktop (≥768px)                                         */
+/*──────────────────────────────────────────────────────────────────────────*/
+@media (min-width: 768px) {
+ 
+.sec{
+    height: 500px;
+}
+
+}
+
+@media (max-width: 992px) {
+ .sec{
+    height: 650px;
+}
+
+
+}
+
+@media (max-width: 768px) {
+ 
+.sec{
+    height: 650px;
+}
+
+}

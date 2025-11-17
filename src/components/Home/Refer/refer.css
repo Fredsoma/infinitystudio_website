@@ -8,3 +8,75 @@
   justify-content: center;
 
 }
+
+.ref{
+  position: relative;
+  bottom: 50px;
+}
+
+
+/* refer.css */
+.service_item-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+  background: transparent;
+}
+
+/* The moving track — wide flex container */
+.service_item-track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  will-change: transform;
+}
+
+/* Individual logo box */
+.service_item {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f5f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s;
+  padding: 0.5rem;
+}
+
+/* Hover effect (optional) */
+.service_item:hover {
+  transform: scale(1.05);
+}
+
+/* The logo itself */
+.service_item img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.25s;
+}
+
+.service_item:hover img {
+  filter: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service_item {
+    width: 100px;
+    height: 50px;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service_item {
+    width: 80px;
+    height: 40px;
+  }
+}

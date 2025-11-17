@@ -12,32 +12,32 @@ const chossData = [
   {
     icon: "ri-wifi-line",
     title: "We Analyse",
-    desc: "Our transparent, step‑by‑step process ensures every milestone is clear, on‑time, and on‑budget.",
+    desc: "We run stakeholder interviews, user research and data audits to define goals, KPIs and a prioritized roadmap.",
   },
   {
     icon: "ri-team-line",
     title: "We Design",
-    desc: "A hand‑picked crew of experts in design, development, and marketing committed to your success.",
+    desc: "We craft user-centered interfaces, interactive prototypes and a reusable design system that align with your brand.",
   },
   {
     icon: "ri-wifi-line",
     title: "We Implement",
-    desc: "Our transparent, step‑by‑step process ensures every milestone is clear, on‑time, and on‑budget.",
+    desc: "We build production-ready code, integrate third-party services/APIs, and optimize for performance, security and scale.",
   },
   {
     icon: "ri-team-line",
     title: "We Test",
-    desc: "A hand‑picked crew of experts in design, development, and marketing committed to your success.",
+    desc: "We run automated and manual QA—unit, integration, accessibility and user testing—to ensure quality and reliability.",
   },
   {
     icon: "ri-time-line",
     title: "We Deploy and maintain",
-    desc: "Around‑the‑clock assistance means you’ll never be left waiting for answers or updates.",
+    desc: "We deploy via CI/CD, monitor performance and apply routine updates, security patches, and proactive optimizations.",
   },
-   {
+  {
     icon: "ri-time-line",
     title: "24/7 Support",
-    desc: "Around‑the‑clock assistance means you’ll never be left waiting for answers or updates.",
+    desc: "Dedicated support with SLAs, incident response and proactive monitoring so your product stays online and healthy.",
   },
 ];
 
